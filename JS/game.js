@@ -22,6 +22,71 @@ const createElement = (tag, classname) => {
  return element;
 }
 
+let firstCard = "";
+let secoundCard = "";
+
+const checkEndGame = () => {
+   const disabledCards = document.querySelectorAll('.disabled-card');
+
+   if(disabledCards.length === 20) {
+    
+    // Para que o alert não despare antes que a ultima carta vire! 
+    setTimeout(() => {
+      alert("Parabéns, você chegou até o final!");
+    }, 220);
+      
+   }
+}
+
+const chekCards = () => {
+ const firstCharacter = firstCard.getAttribute('data-character');
+ const SecoundCharacter = secoundCard.getAttribute('data-character');
+
+ if(firstCharacter === SecoundCharacter) {
+
+   firstCard.firstChild.classList.add('disabled-card');
+   secoundCard.firstChild.classList.add('disabled-card');
+
+   firstCard = "";
+   secoundCard = "";
+
+   checkEndGame();
+
+ }
+ else {
+  
+  setTimeout(() => {
+
+    firstCard.classList.remove('reveal-card');
+    secoundCard.classList.remove('reveal-card');
+
+    firstCard = "";
+    secoundCard = "";
+
+  }, 500);
+
+ }
+}
+
+const revealCard = ( {target} ) => {
+
+  if(target.parentNode.className.includes('reveal-card')) {
+    return;
+  }
+
+  else if (firstCard === "") {
+   target.parentNode.classList.add('reveal-card');
+   firstCard = target.parentNode;
+  }
+
+  else if (secoundCard === "") {
+    target.parentNode.classList.add('reveal-card');
+    secoundCard = target.parentNode;
+
+    chekCards();
+  }
+}
+
 const createCard = (characters) => {
 
   const card = createElement('div', 'card');  
@@ -32,6 +97,9 @@ const createCard = (characters) => {
 
   card.appendChild(front);
   card.appendChild(back);
+
+   card.addEventListener('click', revealCard);
+   card.setAttribute('data-character', characters);
 
   return card;
 }
