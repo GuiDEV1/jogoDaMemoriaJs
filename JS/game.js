@@ -1,5 +1,7 @@
 // Elemento pai dos card
 const grid = document.querySelector('.grid');
+const spanPlayer = document.querySelector('.player');
+const timer = document.querySelector('.timer');
 
 const characters = [
   'beth',
@@ -29,11 +31,13 @@ const checkEndGame = () => {
    const disabledCards = document.querySelectorAll('.disabled-card');
 
    if(disabledCards.length === 20) {
-    
+    clearInterval(this.loop);
     // Para que o alert não despare antes que a ultima carta vire! 
     setTimeout(() => {
-      alert("Parabéns, você chegou até o final!");
+      alert(`Parabéns, ${spanPlayer.innerHTML}. Seu tempo foi de: ${timer.innerHTML}`);
     }, 220);
+
+    
       
    }
 }
@@ -118,6 +122,26 @@ const loadGame = () => {
 
 }
 
-loadGame();
+// Temporizador que conta o tempo de jogo do usuário. 
+const startTimer = () => {
+   
+  this.loop = setInterval(() => {
+    
+    const currentTime = +timer.innerHTML;
+    timer.innerHTML = currentTime + 1;
 
-c
+  }, 1000);
+
+}
+
+// Recarrega todos elemento da pagina, e depois executa a função
+window.onload = () => {
+  
+  spanPlayer.innerHTML = localStorage.getItem('player');
+
+  startTimer();
+  loadGame();
+}
+
+
+
