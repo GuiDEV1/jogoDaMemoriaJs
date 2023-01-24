@@ -1,4 +1,5 @@
 
+/* Elemento pai */
 .login-form {
  display: flex;
  flex-direction: column;
@@ -7,7 +8,7 @@
  justify-content: center;
 }
 
-
+/* Comprtamento dos elementos */
 .login-header {
  align-items: center;
  display: flex;
@@ -16,20 +17,24 @@
  margin-bottom: 30px;
 }
 
+/* Estilização da logo */
 .login-header #logo-rick  {
     width: 100%;
     max-width: 400px;
    }
 
+/* Estilização da imagem */
 .login-header img {
  width: 230px;
 }
 
+/* Estilização do titulo */
 .login-header h1 {
     color: #333;
     font-size: 1.5em;
 }
 
+/* Estilização do input */
 .login_input {
     border: 2px solid #333;
     border-radius: 8px;
@@ -42,12 +47,14 @@
     padding: 15px;
 }
 
+/* Estilziação do botão no seu estado disabled */
 .login_button:disabled {
     background-color: #eee;
     color: #aaa;
     cursor: auto;
 }
 
+/* Estilziação do botão no seu estado abilitado */
 .login_button {
     background-color: #ee665c;
     border-radius: 8px;

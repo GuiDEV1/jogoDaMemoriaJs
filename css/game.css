@@ -1,3 +1,4 @@
+/* Elemento pai */
 main {
     display: flex;
     flex-direction: column;
@@ -10,6 +11,7 @@ main {
     padding: 20px 20px 50px;
 }
 
+/* Area do nick name e contador */
 header {
     display: flex;
     align-items: center;
@@ -67,10 +69,12 @@ header {
  backface-visibility: hidden;
 }
 
+/* Rotação das cartas */
 .reveal-card {
  transform: rotatey(188deg);
 }
 
+/* Efeito após as cartas serem reveladas e forem iguais. */
 .disabled-card {
     filter: saturate(0);
     opacity: 0.5;

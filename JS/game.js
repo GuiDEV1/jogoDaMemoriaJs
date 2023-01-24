@@ -1,8 +1,9 @@
-// Elemento pai dos card
+// Variaveis Globai 
 const grid = document.querySelector('.grid');
 const spanPlayer = document.querySelector('.player');
 const timer = document.querySelector('.timer');
 
+// Vetor que guarda as imagens dos cards
 const characters = [
   'beth',
   'jerry',
@@ -17,16 +18,17 @@ const characters = [
 ]
 
 //script das posições dinamicas das cartas
-
 const createElement = (tag, classname) => {
  const element = document.createElement(tag);
  element.className = classname;
  return element;
 }
 
+// Variaveis para comparar os cards
 let firstCard = "";
 let secoundCard = "";
 
+//Função que checa se o jogo acabou
 const checkEndGame = () => {
    const disabledCards = document.querySelectorAll('.disabled-card');
 
@@ -42,6 +44,7 @@ const checkEndGame = () => {
    }
 }
 
+// Função que checar os cards 
 const chekCards = () => {
  const firstCharacter = firstCard.getAttribute('data-character');
  const SecoundCharacter = secoundCard.getAttribute('data-character');
@@ -72,6 +75,7 @@ const chekCards = () => {
  }
 }
 
+//Função que revela as cartas. 
 const revealCard = ( {target} ) => {
 
   if(target.parentNode.className.includes('reveal-card')) {
@@ -91,6 +95,7 @@ const revealCard = ( {target} ) => {
   }
 }
 
+// Função que cria os cards
 const createCard = (characters) => {
 
   const card = createElement('div', 'card');  
@@ -108,6 +113,7 @@ const createCard = (characters) => {
   return card;
 }
 
+// Função que carrega o game
 const loadGame = () => {
 
     const duplicateCharacteres = [...characters, ...characters ];
