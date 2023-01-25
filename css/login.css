@@ -1,3 +1,9 @@
+#bgHome {
+    background-image: url(../images2/bgGalaxia.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
 
 /* Elemento pai */
 .login-form {
@@ -21,17 +27,21 @@
 .login-header #logo-rick  {
     width: 100%;
     max-width: 400px;
+    border-radius: 13px;
+    margin-bottom: 12px;
    }
 
 /* Estilização da imagem */
 .login-header img {
- width: 230px;
+ width: 240px;
 }
 
 /* Estilização do titulo */
 .login-header h1 {
-    color: #333;
-    font-size: 1.5em;
+    color: #fafafa;
+    -webkit-text-stroke-width: 0.5px;
+    -webkit-text-stroke-color: #000;
+    font-size: 1.6em;
 }
 
 /* Estilização do input */
@@ -56,11 +66,12 @@
 
 /* Estilziação do botão no seu estado abilitado */
 .login_button {
-    background-color: #ee665c;
+    background-color: #74bde4;
+    border: 2.5px solid rgb(174, 133, 9);
     border-radius: 8px;
     color: #fff;
     padding: 15px;
-    font: 1em;
+    font-size: 1em;
     width: 100%;
     max-width: 300px;
     cursor: pointer;
