@@ -5,16 +5,16 @@ const timer = document.querySelector('.timer');
 
 // Vetor que guarda as imagens dos cards
 const characters = [
-  'beth',
-  'jerry',
-  'jessica',
-  'morty',
-  'pessoa-passaro',
-  'pickle-rick',
-  'rick',
-  'summer',
-  'meeseeks',
-  'scroopy',
+  'benson',
+  'eileen',
+  'fantasmao',
+  'margaret',
+  'mordecai',
+  'morte',
+  'musculoso',
+  'pairulito',
+  'rigby',
+  'saltitao',
 ]
 
 //script das posições dinamicas das cartas
@@ -145,7 +145,7 @@ window.onload = () => {
   
   spanPlayer.innerHTML = localStorage.getItem('player');
 
-  //startTimer();
+  startTimer();
   loadGame();
 }
 

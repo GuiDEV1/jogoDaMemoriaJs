@@ -3,7 +3,7 @@ main {
     display: flex;
     flex-direction: column;
     width: 100%;
-    background-image: url(../images2/parque.jpg);
+    background-image: url(../images/parque.jpg);
     background-size: cover;
     min-height: 100vh;
     align-items: center;
@@ -66,7 +66,7 @@ header {
 
 /* Card verso */
 .back {
- background-image: url(../images2/apsBack2.jpg);
+ background-image: url(../images/apsBack2.jpg);
  backface-visibility: hidden;
 }
 
