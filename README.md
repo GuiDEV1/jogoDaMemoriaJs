@@ -33,5 +33,5 @@
   <img width="150px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" />  
 </div>
 
-<a href="https://guidev1.github.io/jogoDaMemoriaJs/">Visualizar Projeto</a>
+<a href="https://guidev1.github.io/jogoDaMemoriaJs/">🎮 Visualizar Projeto</a>
 
